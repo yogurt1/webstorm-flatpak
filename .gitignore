@@ -1,0 +1,4 @@
+app
+repo
+*.flatpak
+.flatpak-builder

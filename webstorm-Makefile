@@ -1,0 +1,13 @@
+ICON_DIR = /app/share/icons/hicolor/scalable/apps
+DESKTOP_DIR = /app/share/applications
+
+all:
+	true
+
+install:
+	mkdir -p /app/WebStorm /app/bin
+	cp -ra * /app/WebStorm
+	ln -s /app/WebStorm/bin/webstorm.sh /app/bin/webstorm
+	mkdir -p $(ICON_DIR) $(DESKTOP_DIR)
+	cp com.jetbrains.WebStorm.desktop $(DESKTOP_DIR)
+	cp com.jetbrains.WebStorm.svg $(ICON_DIR)

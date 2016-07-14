@@ -1,0 +1,34 @@
+{
+  "app-id": "com.jetbrains.WebStorm",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "1.4",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "webstorm",
+  "finish-args": [
+    "--persist=.java",
+    "--share=ipc",
+    "--socket=x11",
+    "--share=network"
+  ],
+  "modules": [{
+    "name": "webstorm",
+    "no-autogen": true,
+    "sources": [{
+      "type": "archive",
+      "url": "http://download.jetbrains.com/webstorm/WebStorm-2016.2.tar.gz",
+      "sha256": "a3453ce89f6dfc55de1723b3e6119a71771a20a8c4ca4da60dcb1fd91e3700d9"
+    },{
+      "type": "file",
+      "path": "webstorm-Makefile",
+      "dest-filename": "Makefile"
+    },{
+      "type": "file",
+      "path": "com.jetbrains.WebStorm.svg",
+      "dest-filename": "com.jetbrains.WebStorm.svg"
+    },{
+      "type": "file",
+      "path": "com.jetbrains.WebStorm.desktop",
+      "dest-filename": "com.jetbrains.WebStorm.desktop"
+    }]
+  }]
+}
